@@ -43,7 +43,7 @@
 
       // Determine who won and return result
       if (computerSelection === playerSelection) {
-        return "It's a draw."
+        return "Tie"
       }
       else {
         if (computerSelection === 1 && playerSelection === 2) {
@@ -73,27 +73,29 @@
       let playerSelection;
       let computerScore = 0;
       let playerScore = 0;
+      let counter = 0;
 
-      for (let i=0; i<5; i++) {
+      while (counter < 5) {
         playerSelection = prompt("Make your choice: ");
         computerSelection = computerPlay(1, 3);
         result = playRound(playerSelection, computerSelection);
 
-        if (result === "It's a draw.") {
+        if (result === "Tie") {
+          console.log("Tie!")
           continue;
         }
         else if (result === 'playerScore') {
-          playerScore+=1;
+          playerScore++;
+          counter++;
         }
         else {
-          computerScore+=1;
+          computerScore++;
+          counter++;
         }
+        console.log("Computer Score: " + computerScore + "   |   " + "Player Score: " + playerScore)
       }
 
-      if (computerScore === playerScore) {
-        return "It's a draw. " + computerScore + ":" + playerScore;
-      }
-      else if (computerScore > playerScore) {
+      if (computerScore > playerScore) {
         return "You lose! " + computerScore + ":" + playerScore;
       }
       else {
