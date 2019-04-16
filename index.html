@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    let result;
+    let rock = 1;
+    let paper = 2;
+    let scissor = 3;
+
+    // Get random value for the game
+    function computerPlay(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return result = Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function playRound(playerSelection, computerSelection) {
+
+      // Convert player input to lowercase
+      playerSelection = playerSelection.toLowerCase();
+
+      // Convert player input to integers for easier compare
+      if (playerSelection === 'rock') {
+        playerSelection = 1;
+      }
+      else if (playerSelection === 'paper') {
+        playerSelection = 2;
+      }
+      else {
+        playerSelection = 3;
+      }
+
+      // Determine who won and return result
+      if (computerSelection === playerSelection) {
+        return "It's a draw."
+      }
+      else {
+        if (computerSelection === 1 && playerSelection === 2) {
+          return "playerScore"
+        }
+        else if (computerSelection === 1 && playerSelection === 3) {
+          return "computerScore"
+        }
+        else if (computerSelection === 2 && playerSelection === 1) {
+          return "computerScore"
+        }
+        else if (computerSelection === 2 && playerSelection === 3) {
+          return "playerScore"
+        }
+        else if (computerSelection === 3 && playerSelection === 1) {
+          return "playerScore"
+        }
+        else {
+          return "computerScore"
+        }
+      }
+    }
+
+    function game() {
+      let result;
+      let computerSelection;
+      let playerSelection;
+      let computerScore = 0;
+      let playerScore = 0;
+
+      for (let i=0; i<5; i++) {
+        playerSelection = prompt("Make your choice: ");
+        computerSelection = computerPlay(1, 3);
+        result = playRound(playerSelection, computerSelection);
+
+        if (result === "It's a draw.") {
+          continue;
+        }
+        else if (result === 'playerScore') {
+          playerScore+=1;
+        }
+        else {
+          computerScore+=1;
+        }
+      }
+
+      if (computerScore === playerScore) {
+        return "It's a draw. " + computerScore + ":" + playerScore;
+      }
+      else if (computerScore > playerScore) {
+        return "You lose! " + computerScore + ":" + playerScore;
+      }
+      else {
+        return "You win! " + playerScore + ":" + computerScore;
+      }
+    }
+
+    console.log(game());
+
+
+  </script>
+</body>
+</html>
