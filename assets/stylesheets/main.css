@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
+html, body {
+  height: 100%;
+  display: grid;
+  background-color: #E7552C;
+}
+
+.choice, #footer {
+  margin: auto;
+}
+
+.btn {
+    border-color: #FF7F50;
+    border-width: 0px;
+    border-radius: 50%;
+    display: inline;
+    height: 168px;
+    width: 168px;
+    padding: 0;
+    /*box-shadow: 0 0 1rem;*/
+    box-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+    margin: 5px 30px;
+}
+
+.rockimage, .paperimage, .scissorsimage {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+}
+
+#playerscore, #computerscore, #round-count, #tie-count {
+  font-size: 3.5em;
+  font-family: Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+
+#playerscore {
+  float: right;
+}
+
+#computerscore {
+  float: left;
+}
+
+#round-count {
+  clear: both;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+#tie-count {
+  text-align: center;
+}
+
+.main-heading {
+  font-family: Helvetica, sans-serif;
+  font-size: 80px;
+  color: #FFFFFF;
+  margin: auto;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+#nav {
+  margin: auto;
+  position: relative;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+  width: 1000px;
+}
+ #new-game {
+   background-color: #E7552C;/*#763626;*/
+   box-shadow: 0 0 1rem black;
+   border: 0px;
+   border-radius: 15px;
+   color: #FFFFFF;
+   font-size: 3.5em;
+   margin: auto;
+   line-height: 1em;
+   padding-bottom: 5px;
+   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+              0px 8px 13px rgba(0,0,0,0.1),
+              0px 18px 23px rgba(0,0,0,0.1);
+   width: 308px;
+ }
+
+ #new-game:hover {
+   transform: scale(1.1);
+ }
